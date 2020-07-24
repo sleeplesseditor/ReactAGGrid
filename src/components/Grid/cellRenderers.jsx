@@ -23,6 +23,8 @@ const getIcon = (icon) => {
       return 'cf cf-doge';
     case IconNames.EOS:
       return 'cf cf-eos';
+    case IconNames.EOSDAC:
+      return 'cf cf-eos';
     case IconNames.ETC:
       return 'cf cf-etc';
     case IconNames.ETH:

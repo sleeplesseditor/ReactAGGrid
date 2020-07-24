@@ -9,6 +9,7 @@ export const IconNames = {
     DASH: 'DASH',
     DOGE: 'DOGE',
     EOS: 'EOS',
+    EOSDAC: 'EOSDAC',
     ETC: 'ETC',
     ETH: 'ETH',
     GRIN: 'GRIN',
