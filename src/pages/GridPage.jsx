@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import fetch from "unfetch";
 import useSWR from "swr";
 import Grid from '../components/Grid/Grid';
-import { columnDefs } from '../components/Grid/Config';
+import { columnDefs, defaultColDef } from '../components/Grid/Config';
 import './GridPage.scss';
 
 const API_URL = "https://api.coincap.io/v2/markets";
@@ -21,10 +21,11 @@ const GridPage = () => {
 
     return (
         <div className="grid-page">
-        <Grid 
-            columnDefs={columnDefs}
-            rowData={coinData}
-        />
+            <Grid 
+                columnDefs={columnDefs}
+                defaultColDef={defaultColDef}
+                rowData={coinData}
+            />
         </div>
     )
 }

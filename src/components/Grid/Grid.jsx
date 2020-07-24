@@ -4,18 +4,24 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import './Grid.scss';
 
-const Grid = ({ columnDefs, rowData }) => {
+const Grid = ({ columnDefs, defaultColDef, rowData }) => {
+    const onFirstDataRendered = params => {
+        params.api.sizeColumnsToFit();
+    }
+
     return (
         <div className="grid-container">
             <div className="ag-theme-balham"
                 style={{ height: '100vh', width: '1200px' }}>
-                <AgGridReact 
+                <AgGridReact
+                    defaultColDef={defaultColDef}
                     filter={true}
                     rowSelection="multiple"
                     resizable={true}
                     columnDefs={columnDefs}
                     rowData={rowData}
                     enableSorting={true}
+                    onFirstDataRendered={onFirstDataRendered}
                 />
             </div>
         </div>

@@ -1,3 +1,5 @@
+import { acronymFormatter, currencyFormatter, timeStampFormatter } from './formatters';
+
 const baseSymbol = {
     headerName: 'Base Symbol',
     field: 'baseSymbol',
@@ -15,6 +17,7 @@ const quoteSymbol = {
 const exchangeId = {
     headerName: 'Exchange ID',
     field: 'exchangeId',
+    valueFormatter: acronymFormatter,
     sortable: true,
     filter: true
 }
@@ -22,6 +25,7 @@ const exchangeId = {
 const priceQuote = {
     headerName: 'Price Quote',
     field: 'priceQuote',
+    valueFormatter: currencyFormatter,
     sortable: true,
     filter: true
 }
@@ -29,6 +33,7 @@ const priceQuote = {
 const priceUSD = {
     headerName: 'Price (USD)',
     field: 'priceUsd',
+    valueFormatter: currencyFormatter,
     sortable: true,
     filter: true
 }
@@ -50,10 +55,13 @@ const tradesCount24Hr = {
 const updated = {
     headerName: 'Updated',
     field: 'updated',
+    valueFormatter: timeStampFormatter,
     sortable: true,
     filter: true
 }
 
 export const columnDefs = [
-    rank, baseSymbol, quoteSymbol, exchangeId, priceQuote, priceUSD, tradesCount24Hr, updated
+    exchangeId, rank, baseSymbol, quoteSymbol, priceQuote, priceUSD, tradesCount24Hr, updated
 ]
+
+export const defaultColDef = { resizable: true };
