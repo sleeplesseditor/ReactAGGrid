@@ -4,17 +4,17 @@ import LazyLoader from './components/LazyLoader/LazyLoader';
 import './App.scss';
 import Header from './components/Header/Header';
 
-const Grid = React.lazy(() => import('./components/Grid/Grid'));
+const GridPage = React.lazy(() => import('./pages/GridPage'));
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={LazyLoader(Grid)} />
+        <Route exact path="/" component={LazyLoader(GridPage)} />
       </Switch>
     </Router>
-  );
+  )
 }
 
 export default App;
