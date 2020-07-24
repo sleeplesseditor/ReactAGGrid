@@ -1,8 +1,9 @@
-import { acronymFormatter, currencyFormatter, timeStampFormatter } from './formatters';
+import { acronymFormatter, currencyFormatter, numberForDisplay, timeStampFormatter } from './formatters';
 
 const baseSymbol = {
     headerName: 'Base Symbol',
     field: 'baseSymbol',
+    cellRenderer: 'iconRenderer',
     sortable: true,
     filter: true
 }
@@ -10,6 +11,7 @@ const baseSymbol = {
 const quoteSymbol = {
     headerName: 'Quote Symbol',
     field: 'quoteSymbol',
+    cellRenderer: 'iconRenderer',
     sortable: true,
     filter: true
 }
@@ -48,6 +50,7 @@ const rank = {
 const tradesCount24Hr = {
     headerName: 'Trades Count (24hr)',
     field: 'tradesCount24Hr',
+    valueFormatter: numberForDisplay,
     sortable: true,
     filter: true
 }
@@ -57,11 +60,12 @@ const updated = {
     field: 'updated',
     valueFormatter: timeStampFormatter,
     sortable: true,
-    filter: true
+    filter: true,
+    sort: 'desc',
 }
 
 export const columnDefs = [
     exchangeId, rank, baseSymbol, quoteSymbol, priceQuote, priceUSD, tradesCount24Hr, updated
 ]
 
-export const defaultColDef = { resizable: true };
+export const defaultColDef = { resizable: true, enableCellChangeFlash: true };

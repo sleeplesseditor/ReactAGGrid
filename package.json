@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "ag-grid-community": "^23.2.1",
     "ag-grid-react": "^23.2.1",
+    "cryptocurrency-icons-font": "^0.6.7",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

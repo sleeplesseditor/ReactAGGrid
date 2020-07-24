@@ -6,7 +6,7 @@ function LazyLoader(WrappedComponent) {
     render() {
       return (
         <Suspense fallback={<Spinner />}>
-          <WrappedComponent {...this.props} />;
+          <WrappedComponent {...this.props} />
         </Suspense>
       )
     }

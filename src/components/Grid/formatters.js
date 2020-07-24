@@ -4,14 +4,20 @@ export function currencyFormatter(params) {
     return '\x24' + numberFormatter(params.value);
 }
   
-export function numberFormatter(number) {
-    return Math.floor(number)
-        .toString()
-        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+function numberFormatter(number) {
+    const fixedNumber = parseFloat(number).toFixed(4)
+    const updatedNumber = Number(fixedNumber).toLocaleString('en');
+    return updatedNumber;
 }
 
-export function timeStampFormatter(value) {
-    return moment(value).format('DD/MM/YYYY hh:mm:ss')
+export function numberForDisplay({value}) {
+    const newValue = new Intl.NumberFormat().format(value)
+    return newValue;
+}
+
+export function timeStampFormatter({value}) {
+    var date =  moment(value).isValid() ? moment(value).format('DD/MM/YYYY HH:mm:ss') : '';
+    return date;
 };
 
 export function acronymFormatter(string) {
