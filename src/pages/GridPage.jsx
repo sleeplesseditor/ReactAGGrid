@@ -15,7 +15,7 @@ const localFrameworkComps = {
 }
 
 const GridPage = () => {
-    const { data: result, error } = useSWR(API_URL, fetcher, { refreshInterval: 10000 })
+    const { data: result, error } = useSWR(API_URL, fetcher, { refreshInterval: 5000 })
     const coins = result && !error ? result.data : []
     const [coinData, setCoinData] = useState([])
 

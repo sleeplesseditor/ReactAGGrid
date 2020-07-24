@@ -1,5 +1,17 @@
 import { acronymFormatter, currencyFormatter, numberForDisplay, timeStampFormatter } from './formatters';
 
+function compareValues(params) {
+    if (params.oldValue > params.newValue){ 
+    console.log(params.newValue);
+    return {color: 'green'};
+    }
+
+    if (params.oldValue < params.newValue){ 
+        console.log(params.newValue);
+        return {color: 'red'};
+    }
+}
+
 const baseSymbol = {
     headerName: 'Base Symbol',
     field: 'baseSymbol',
@@ -29,7 +41,8 @@ const priceQuote = {
     field: 'priceQuote',
     valueFormatter: currencyFormatter,
     sortable: true,
-    filter: true
+    filter: 'agNumberColumnFilter',
+    newValueHandler: compareValues
 }
 
 const priceUSD = {
@@ -37,14 +50,15 @@ const priceUSD = {
     field: 'priceUsd',
     valueFormatter: currencyFormatter,
     sortable: true,
-    filter: true
+    filter: 'agNumberColumnFilter',
+    newValueHandler: compareValues
 }
 
 const rank = {
     headerName: 'Rank',
     field: 'rank',
     sortable: true,
-    filter: true
+    filter: 'agNumberColumnFilter'
 }
 
 const tradesCount24Hr = {
@@ -52,7 +66,8 @@ const tradesCount24Hr = {
     field: 'tradesCount24Hr',
     valueFormatter: numberForDisplay,
     sortable: true,
-    filter: true
+    filter: 'agNumberColumnFilter',
+    newValueHandler: compareValues
 }
 
 const updated = {
@@ -60,7 +75,7 @@ const updated = {
     field: 'updated',
     valueFormatter: timeStampFormatter,
     sortable: true,
-    filter: true,
+    filter: 'agDateColumnFilter',
     sort: 'desc',
 }
 
