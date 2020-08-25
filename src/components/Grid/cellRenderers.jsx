@@ -29,6 +29,8 @@ const getIcon = (icon) => {
       return 'cf cf-etc';
     case IconNames.ETH:
       return 'cf cf-eth';
+    case IconNames.FSN:
+      return 'cf cf-fsn';
     case IconNames.GRIN:
       return 'cf cf-grin';
     case IconNames.HPB:
@@ -49,10 +51,14 @@ const getIcon = (icon) => {
       return 'cf cf-log';
     case IconNames.LTC:
       return 'cf cf-ltc';
+    case IconNames.MANA:
+      return 'cf cf-mana';
     case IconNames.MKR:
       return 'cf cf-mkr';
     case IconNames.NEO:
       return 'cf cf-neo';
+    case IconNames.NULS:
+      return 'cf cf-nuls';
     case IconNames.OMG:
       return 'cf cf-omg';
     case IconNames.ONT:
@@ -94,6 +100,12 @@ export const IconRenderer = ({ value }) => {
     return (
       <div />
     );
+  } else if (value === 'AUD') {
+    return (
+      <div>
+        A$ {value}
+      </div>
+    )
   }
   return (
     <div>

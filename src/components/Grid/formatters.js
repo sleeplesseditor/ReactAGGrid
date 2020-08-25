@@ -1,5 +1,9 @@
 import moment from 'moment';
 
+export function rankNumberFormatter(params) {
+    return numberFormatter(params.value)
+}
+
 export function currencyFormatter(params) {
     return '\x24' + numberFormatter(params.value);
 }

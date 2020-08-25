@@ -1,4 +1,4 @@
-import { acronymFormatter, currencyFormatter, numberForDisplay, timeStampFormatter } from './formatters';
+import { acronymFormatter, currencyFormatter, numberForDisplay, rankNumberFormatter, timeStampFormatter } from './formatters';
 
 function compareValues(params) {
     if (params.oldValue > params.newValue){ 
@@ -58,7 +58,9 @@ const rank = {
     headerName: 'Rank',
     field: 'rank',
     sortable: true,
-    filter: 'agNumberColumnFilter'
+    valueFormatter: rankNumberFormatter,
+    filter: 'agNumberColumnFilter',
+    type: 'numberColumn',
 }
 
 const tradesCount24Hr = {
