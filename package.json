@@ -9,6 +9,9 @@
     "ag-grid-community": "^23.2.1",
     "ag-grid-react": "^23.2.1",
     "cryptocurrency-icons-font": "^0.6.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -22,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom-sixteen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

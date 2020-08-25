@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from './testing/custom-render';
+import { screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('uses React Router and renders the App component as the default page', () => {
+  const title = 'React AG-Grid';
+  render(<App />);
+  expect(screen.getByText(title)).toBeInTheDocument();
 });
