@@ -1,7 +1,8 @@
 import moment from 'moment';
 
-export function rankNumberFormatter(value) {
-    return numberFormatter(value)
+export function rankNumberFormatter(params) {
+    const newValue = params.value ? parseInt(params.value) : parseInt(params);
+    return newValue;
 }
 
 export function currencyFormatter(value) {
@@ -25,6 +26,6 @@ export function timeStampFormatter({value}) {
 };
 
 export function acronymFormatter(string) {
-    const acronym = string.value.toUpperCase();
+    const acronym = string.value ? string.value.toUpperCase() : string.toUpperCase();
     return acronym;
 }
