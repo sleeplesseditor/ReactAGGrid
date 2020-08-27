@@ -48,7 +48,9 @@ const modal = ({ data, modalClosed, show }) => {
                         </div>
                         <div className='grid-modal-cell'>
                             <h4>Quote Symbol</h4>
-                            <p className="grid-modal-cell-quote">{modalIconRenderer(data.quoteSymbol)} {data.quoteSymbol.toUpperCase()}</p>
+                            <p className="grid-modal-cell-quote">
+                                {modalIconRenderer(data.quoteSymbol)} {data.quoteSymbol === 'AUD' ? null : data.quoteSymbol.toUpperCase()}
+                            </p>
                         </div>
                     </div>
                     <hr />

@@ -15,6 +15,7 @@ const Grid = ({ columnDefs, defaultColDef, frameworkComponents, rowClick, rowDat
                 style={{ height: '100vh', width: '1200px' }}>
                 <AgGridReact
                     defaultColDef={defaultColDef}
+                    id="crypto-coin"
                     frameworkComponents={frameworkComponents}
                     filter={true}
                     rowSelection="multiple"

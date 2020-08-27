@@ -18,7 +18,7 @@ function numberFormatter(number) {
 
 export function numberForDisplay(params) {
     const newValue = params.value ? new Intl.NumberFormat().format(params.value) : new Intl.NumberFormat().format(params)
-    return newValue;
+    return params.value === null ? 0 : newValue;
 }
 
 export function timeStampFormatter({value}) {
