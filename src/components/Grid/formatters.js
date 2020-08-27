@@ -1,7 +1,8 @@
 import moment from 'moment';
 
 export function rankNumberFormatter(params) {
-    return numberFormatter(params.value)
+    const newValue = parseInt(params.value);
+    return newValue;
 }
 
 export function currencyFormatter(params) {

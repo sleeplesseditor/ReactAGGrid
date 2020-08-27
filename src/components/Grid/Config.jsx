@@ -60,7 +60,17 @@ const rank = {
     sortable: true,
     valueFormatter: rankNumberFormatter,
     filter: 'agNumberColumnFilter',
-    type: 'number',
+    comparator: function (number1, number2) { 
+        if (number1 === null && number2 === null) {
+            return 0;
+        }
+       if (number1 === null) {
+         return -1;
+       }
+      if (number2 === null) {
+          return 1;
+       }
+     return number1 - number2;}
 }
 
 const tradesCount24Hr = {
