@@ -1,0 +1,95 @@
+.grid {
+    &-backdrop {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    &-modal {
+        position: fixed;
+        z-index: 500;
+        background-color: white;
+        width: 70%;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px black;
+        padding: 16px;
+        left: 15%;
+        top: 30%;
+        box-sizing: border-box;
+        transition: all 0.3s ease-out;
+
+        &-cell {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                margin-bottom: 0;
+            }
+
+            &-quote {
+                display: flex;
+                flex-direction: row;
+                
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &-row {
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &-btn {
+            background-color: rgb(216, 3, 3);
+            font-weight: bold;
+            color: #fff;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: rgb(255, 21, 21);
+            }
+
+            &-container {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            i {
+                font-size: 2rem;
+            }
+
+            h2 {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .grid-modal {
+        width: 700px;
+        left: calc(50% - 350px);
+    }
+}

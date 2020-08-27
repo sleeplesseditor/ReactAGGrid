@@ -1,5 +1,8 @@
-.grid-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.grid {
+    &-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+

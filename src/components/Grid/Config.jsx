@@ -60,7 +60,7 @@ const rank = {
     sortable: true,
     valueFormatter: rankNumberFormatter,
     filter: 'agNumberColumnFilter',
-    type: 'numberColumn',
+    type: 'number',
 }
 
 const tradesCount24Hr = {

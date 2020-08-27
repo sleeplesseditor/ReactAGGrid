@@ -33,6 +33,8 @@ const getIcon = (icon) => {
       return 'cf cf-fsn';
     case IconNames.GRIN:
       return 'cf cf-grin';
+    case IconNames.HC:
+      return 'cf cf-hc';
     case IconNames.HPB:
       return 'cf cf-hpb';
     case IconNames.HT:
@@ -110,6 +112,25 @@ export const IconRenderer = ({ value }) => {
   return (
     <div>
       {IconSelector(value)} {value}
+    </div>
+  );
+}
+
+export const modalIconRenderer = (value) => {
+  if (!value) {
+    return (
+      <div />
+    );
+  } else if (value === 'AUD') {
+    return (
+      <div>
+        A$ {value}
+      </div>
+    )
+  }
+  return (
+    <div>
+      {IconSelector(value)}
     </div>
   );
 }

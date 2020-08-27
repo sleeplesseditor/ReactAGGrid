@@ -6,8 +6,8 @@ export default function Header() {
   return (
     <header className='navbar'>
       <h3 className='navbar-heading' data-testid='navbar-main'>
-          React AG-Grid
-        </h3>
+        React CryptoCoin AG-Grid
+      </h3>
     </header>
   );
 }

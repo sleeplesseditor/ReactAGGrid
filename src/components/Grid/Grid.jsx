@@ -4,7 +4,7 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import './Grid.scss';
 
-const Grid = ({ columnDefs, defaultColDef, frameworkComponents, rowData }) => {
+const Grid = ({ columnDefs, defaultColDef, frameworkComponents, rowClick, rowData }) => {
     const onFirstDataRendered = params => {
         params.api.sizeColumnsToFit();
     }
@@ -24,6 +24,7 @@ const Grid = ({ columnDefs, defaultColDef, frameworkComponents, rowData }) => {
                     sorting={true}
                     onFirstDataRendered={onFirstDataRendered}
                     animateRows={true}
+                    onRowClicked={rowClick}
                 />
             </div>
         </div>

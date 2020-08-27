@@ -14,6 +14,7 @@ export const IconNames = {
     ETH: 'ETH',
     FSN: 'FSN',
     GRIN: 'GRIN',
+    HC: 'HC',
     HPB: 'HPB',
     HT: 'HT',
     HYN: 'HYN',
