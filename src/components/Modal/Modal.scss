@@ -18,8 +18,10 @@
         box-shadow: 1px 1px 1px black;
         padding: 16px;
         left: 15%;
-        top: 30%;
+        top: 15%;
         box-sizing: border-box;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
         transition: all 0.3s ease-out;
 
         &-cell {
@@ -41,10 +43,6 @@
         }
 
         &-row {
-            // display: flex;
-            // flex-direction: row;
-            // flex-wrap: wrap;
-            // justify-content: space-between;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
@@ -91,5 +89,6 @@
     .grid-modal {
         width: 700px;
         left: calc(50% - 350px);
+        top: 20%;
     }
 }

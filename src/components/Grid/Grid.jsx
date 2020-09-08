@@ -12,7 +12,7 @@ const Grid = ({ columnDefs, defaultColDef, frameworkComponents, rowClick, rowDat
     return (
         <div className="grid-container">
             <div className="ag-theme-balham"
-                style={{ height: '100vh', width: '1200px' }}>
+                style={{ height: '85vh', width: '95vw' }}>
                 <AgGridReact
                     defaultColDef={defaultColDef}
                     id="crypto-coin"
