@@ -13,6 +13,7 @@ export const IconNames = {
     ETC: 'ETC',
     ETH: 'ETH',
     FSN: 'FSN',
+    GNX: 'GNX',
     GRIN: 'GRIN',
     HC: 'HC',
     HPB: 'HPB',

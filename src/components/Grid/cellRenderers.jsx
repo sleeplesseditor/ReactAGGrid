@@ -31,6 +31,8 @@ const getIcon = (icon) => {
       return 'cf cf-eth';
     case IconNames.FSN:
       return 'cf cf-fsn';
+    case IconNames.GNX:
+        return 'cf cf-gnx';
     case IconNames.GRIN:
       return 'cf cf-grin';
     case IconNames.HC:
